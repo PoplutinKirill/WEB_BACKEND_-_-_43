@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт и лендинг по подбору битых авто из США. Всё об аукционах Copart и IAAI: фотогалерея, видео, таблицы ставок, форма обратной связи.">
+    <meta name="keywords" content="битые авто, сша, аукцион, copart, iaai, подбор авто, лендинг, html проект">
+    <meta name="author" content="USA Auto">
+    <title>Сайт: Легендарные битые авто из США</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header, nav, section, article, footer {
+            background: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #e0e0e0;
+        }
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery figure {
+            margin: 0;
+            text-align: center;
+        }
+        .gallery img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .text-examples {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        hr {
+            border: 0;
+            height: 2px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .media-player {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        video, audio {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        video {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+        }
+        .audio-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f5f9ff;
+            border-radius: 8px;
+        }
+        form {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Сайт: <del>Битые</del> <ins>Легендарные</ins> авто из Америки</h1>
+        <p>Сообщество фанатов американских аукционов <strong>Copart</strong> и <em>IAAI</em>. Учимся подбирать битые авто правильно!</p>
+        <hr>
+        <p><small>Комплексный проект по HTML (Лабораторные работы 1-3)</small></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#formatting">Форматирование</a></li>
+            <li><a href="#lists">Списки</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#table">Таблица</a></li>
+            <li><a href="#media">Аудио/Видео</a></li>
+            <li><a href="#form">Форма</a></li>
+            <li><a href="#links">Ссылки</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="formatting">
+            <h2>Раздел 1: Все варианты оформления текста</h2>
+            
+            <div class="text-examples">
+                <p><strong>Жирный текст (strong)</strong> — для важных терминов, например, <strong>Salvage Title</strong>.</p>
+                <p><em>Курсив (em)</em> — для акцента: <em>реально выгодно!</em></p>
+                <p><u>Подчеркнутый (u)</u> — <u>обратите внимание</u> на этот пункт.</p>
+                <p><del>Перечеркнутый (del)</del> — старая цена: <del>20 000$</del>.</p>
+                <p><ins>Вставленный (ins)</ins> — новая цена: <ins>17 999$</ins>.</p>
+                <p><mark>Выделенный маркером (mark)</mark> — <mark>важная информация!</mark></p>
+                <p><small>Маленький текст (small)</small> — для сносок и комментариев.</p>
+                
+                <p>Надстрочный индекс: E = mc<sup>2</sup></p>
+                <p>Подстрочный индекс: H<sub>2</sub>O</p>
+                
+                <p><q>Короткая цитата</q> — как говорят американцы: <q>Buy salvage, drive luxury!</q></p>
+                
+                <blockquote>
+                    <strong>Длинная цитата:</strong> "Покупка битых авто — это искусство видеть алмаз в груде металлолома. Главное — правильно подобрать лот и не переплатить за доставку".
+                </blockquote>
+                
+                <p><abbr title="Vehicle Identification Number">VIN</abbr> — аббревиатура (наведите курсор).</p>
+                
+                <p><code>&lt;html&gt;</code> — пример кода (тег code).</p>
+                
+                <p><kbd>Ctrl+S</kbd> — клавиши (тег kbd).</p>
+            </div>
+        </section>
+
+        <section id="lists">
+            <h2>Раздел 2: Списки всех типов</h2>
+
+            <h3>Маркированный список (навыки сотрудников)</h3>
+            <ul>
+                <li>Чтение аукционных листов на английском</li>
+                <li>Анализ VIN-истории (Carfax, AutoCheck)</li>
+                <li>Поиск редких запчастей в США и Европе</li>
+                <li>Участие в торгах на Copart и IAAI</li>
+                <li>Расчет стоимости растаможки</li>
+            </ul>
+
+            <h3>Нумерованный список (любимые фильмы про авто)</h3>
+            <ol>
+                <li>Форсаж 1 (зарождение любви к американским авто)</li>
+                <li>Ford против Ferrari (легендарное противостояние)</li>
+                <li>Такси (французский взгляд на авто)</li>
+                <li>Безумный Макс (постапокалиптический тюнинг)</li>
+                <li>Угнать за 60 секунд (Mustang Eleanor)</li>
+            </ol>
+
+            <h3>Список определений (термины аукционов)</h3>
+            <dl>
+                <dt>VIN-номер</dt>
+                <dd>Идентификационный номер автомобиля. По нему можно проверить историю, пробег, комплектацию и участие в ДТП.</dd>
+                
+                <dt>Copart / IAAI</dt>
+                <dd>Крупнейшие страховые аукционы США по продаже битых и аварийных автомобилей.</dd>
+                
+                <dt>Clean Title</dt>
+                <dd>Чистый документ (авто не числится в тотале, нет серьезных повреждений в истории).</dd>
+                
+                <dt>Salvage Title</dt>
+                <dd>Страховой статус "тотальный ущерб". Авто признано страховой компанией не подлежащим экономически выгодному ремонту.</dd>
+                
+                <dt>Run & Drive</dt>
+                <dd>Автомобиль заводится и может двигаться своим ходом (самый дорогой статус).</dd>
+            </dl>
+
+            <h3>Вложенный список (языки программирования для автоматизации)</h3>
+            <ul>
+                <li>Python (парсинг аукционов и мониторинг цен)
+                    <ul>
+                        <li>BeautifulSoup для парсинга</li>
+                        <li>Requests для запросов</li>
+                        <li>Pandas для анализа данных</li>
+                    </ul>
+                </li>
+                <li>JavaScript (калькуляторы растаможки и стоимости ремонта)
+                    <ul>
+                        <li>React для интерфейсов</li>
+                        <li>Node.js для бэкенда</li>
+                    </ul>
+                </li>
+                <li>SQL (базы данных с лотами)</li>
+            </ul>
+        </section>
+
+
+        <section id="gallery">
+            <h2>Раздел 3: Галерея изображений</h2>
+            <p>Примеры автомобилей с аукционов Copart и IAAI:</p>
+            
+            <div class="gallery">
+                <figure>
+                    <img src="image/bmwx5.jpg" alt="Битый BMW X5" title="BMW X5 подготавливают к аукциону">
+                    <figcaption>BMW X5: подготовка лота (Copart)</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="image/mustang.jpg" alt="Ford Mustang" title="Ford Mustang c лёгкими повреждениями">
+                    <figcaption>Ford Mustang: лучший вариант для клиента</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="image/dvs.jpg" alt="Процесс восстановления" title="Замена двигателя">
+                    <figcaption>Процесс восстановления: замена двигателя</figcaption>
+                </figure>
+                
+                <figure>
+                    <img src="image/lot.jpg" alt="Аукцион" title="Аукцион Copart">
+                    <figcaption>Склад битых авто на аукционе</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="table">
+            <h2>Раздел 4: Таблица аукционных ставок</h2>
+            <table>
+                <caption><strong>Пример расчета стоимости лотов на аукционе Copart</strong></caption>
+                <thead>
+                    <tr>
+                        <th>Марка/Модель</th>
+                        <th>Год</th>
+                        <th>Стартовая ставка ($)</th>
+                        <th>Статус</th>
+                        <th>Доставка ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Toyota Camry</td>
+                        <td>2022</td>
+                        <td>4,500</td>
+                        <td>Run & Drive</td>
+                        <td>1,200</td>
+                    </tr>
+                    <tr>
+                        <td>BMW X5</td>
+                        <td>2020</td>
+                        <td>8,200</td>
+                        <td>Salvage</td>
+                        <td>1,500</td>
+                    </tr>
+                    <tr>
+                        <td>Ford Mustang</td>
+                        <td>2019</td>
+                        <td>6,000</td>
+                        <td>Clean Title</td>
+                        <td>1,300</td>
+                    </tr>
+                    <tr>
+                        <td>Honda Accord</td>
+                        <td>2021</td>
+                        <td>3,800</td>
+                        <td>Run & Drive</td>
+                        <td>1,100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Раздел 5: Аудио и видео контент</h2>
+            
+            <article>
+                <h3>Видеообзор: Как проходят торги на Copart</h3>
+                
+                <video controls width="560" height="315">
+                    <source src="image/WIN_20250415_14_17_24_Pro.mp4" type="video/mp4">
+                </video>
+                
+        
+                <div class="audio-section">
+                    <h4>Фоновый звук аукциона (репортаж с торгов)</h4>
+                    <audio controls>
+                        <source src="image/Скриптонит feat. Надя Дорофеева - Не Забирай Меня С Пати.mp3" type="audio/mpeg">
+                    
+                    </audio>
+                </div>
+            </article>
+        </section>
+
+        <section id="form">
+            <h2>Раздел 6: Форма для подбора авто</h2>
+            <p>Заполните форму, и мы подберем для вас лучший вариант на аукционе.</p>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email для связи:</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="car">Интересующая марка:</label>
+                    <select id="car" name="car">
+                        <option value="bmw">BMW</option>
+                        <option value="audi">Audi</option>
+                        <option value="mercedes">Mercedes-Benz</option>
+                        <option value="ford">Ford</option>
+                        <option value="toyota">Toyota</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Тип кузова:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="body" value="sedan" checked> Седан</label>
+                        <label><input type="radio" name="body" value="suv"> Внедорожник</label>
+                        <label><input type="radio" name="body" value="coupe"> Купе</label>
+                        <label><input type="radio" name="body" value="universal"> Универсал</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Дополнительные услуги:</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="service" value="check"> Проверка по VIN</label>
+                        <label><input type="checkbox" name="service" value="delivery"> Доставка до порта</label>
+                        <label><input type="checkbox" name="service" value="customs"> Помощь в растаможке</label>
+                        <label><input type="checkbox" name="service" value="repair"> Организация ремонта</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Дополнительные пожелания:</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Напишите здесь ваши пожелания..."></textarea>
+                </div>
+
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </section>
+
+        <section id="links">
+            <h2>Раздел 7: Полезные ссылки</h2>
+            <ul>
+                <li><a href="https://av.by/" target="_blank" rel="noopener">Официальный сайт Copart</a></li>
+                <li><a href="https://www.drom.ru/" target="_blank" rel="noopener">Официальный сайт IAAI</a></li>
+                <li><a href="#top">Вернуться наверх</a> (внутренняя ссылка-якорь)</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 USA Auto. Все права защищены. Данные аукционов указаны приблизительно.</p>
+    </footer>
+</body>
+</html>
